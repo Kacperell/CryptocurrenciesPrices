@@ -1,0 +1,116 @@
+html {
+    background-repeat: no-repeat;
+    background: #6190E8;
+    font-family: 'helvetica neue';
+    font-size: 2em;
+    font-weight: 200 display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    max-width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+input {
+    width: 100%;
+    padding: 20px;
+}
+
+.search-form {
+    max-width: 90%;
+    margin-top: 50px;
+}
+
+input.search {
+    text-align: center;
+    outline: 0;
+    border: 10px solid #F7F7F7;
+    left: -10%;
+    position: relative;
+    top: 10px;
+    z-index: 2;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+    background: #E0EAFC;
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+    animation: fadeIn 0.8s ease-in both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.suggestions {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.suggestions li {
+    background: white;
+    list-style: none;
+    border-bottom: 1px solid #D8D8D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    margin: 0;
+    padding: 20px;
+    transition: background 0.2s;
+    display: flex;
+    text-transform: capitalize;
+}
+
+.suggestions li:nth-child(even) {
+    transform: perspective(100px) rotateX(2deg) translateY(2px) scale(1.001);
+    background: linear-gradient(to bottom, #ffffff 0%, #EFEFEF 100%);
+}
+
+.suggestions li:nth-child(odd) {
+    transform: perspective(100px) rotateX(-2deg) translateY(2px);
+    background: linear-gradient(to top, #ffffff 0%, #EFEFEF 100%);
+}
+
+.name.price {
+    margin-left: 20%;
+    text-align: center;
+}
+
+.name.symbol {
+    width: 20%;
+    text-align: center;
+}
+
+::placeholder {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width:1200px) {
+    ::placeholder {
+        font-size: 1.2rem;
+    }
+    html {
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 17px;
+    }
+}
